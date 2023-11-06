@@ -12,43 +12,35 @@ var upperCasedCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K
 
 // Function to prompt user for password options
 // return the array that contains all the possible characters based on users preferences
-//or perhaps return as an object, for example, {length:50, lowercase: true, uppercase: false etc }
 function getPasswordOptions() {
-
-// use prompt to ask
-// use if statements to evaluate if it meets criteria  eg ensure input is a number between8-128
-//store what user says in confirm/alerts
-// store confirm statements
-  // if confirm returns true, push some information about the character set into the array       ['lowercase', 'uppercase']
 
 // Length of password: At least 8 characters but no more than 128.
 var length = 0
 length = prompt("How many characters would you like the password to have, from 8 to 128")
-if(length)  
-
-
-//user "Number" to convert a string to a numbereg var userLength = prompt "how long"
-// var myNumber = Number(userLength) or userLength = Number(userLength)
-// OR
-// userLength = parseInt(userLength)
-// OR userLength = +userLength
-
-
-// Lowercase
-confirm
+length = Number(length)
+if (isNaN(length) || length <= 8 || length >= 128){
+  alert("Wrong input, please enter a number between 8 and 128");
+}
+  // Lowercase
+var lowerCase = confirm("Would you like it to contain lowercase letters?")
 
 // Uppercase
-confirm
+var upperCase = confirm("Would you like it to contain uppercase letters?")
 
 // Numeric
-confirm
+var numeric = confirm("Would you like it to containnumbers?")
 
 // Special characters ($@%&*, etc.)
-confirm
+var special = confirm("Would you like it to contain special characters?")
 
 // Code should validate for each input and at least one character type should be selected.
+if (!lowerCase && !upperCase && !numeric && !special) {
+  alert("At least one character type must be selected.")
+}
 
 // Once all prompts are answered, the password should be generated and displayed in an alert or written to the page.
+console.log(lowerCase)
+
 
 // return {length:50, lowercase: true, uppercase: false, numeric: true, special: false}
 }
