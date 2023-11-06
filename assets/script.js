@@ -10,10 +10,11 @@ var lowerCasedCharacters = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', '
 // Array of uppercase characters to be included in password
 var upperCasedCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
+
+var charactersArray = ['']
 // Function to prompt user for password options
 // return the array that contains all the possible characters based on users preferences
 function getPasswordOptions() {
-
 // Length of password: At least 8 characters but no more than 128.
 var length = 0
 length = prompt("How many characters would you like the password to have, from 8 to 128")
@@ -21,9 +22,11 @@ length = Number(length)
 if (isNaN(length) || length <= 8 || length >= 128){
   alert("Wrong input, please enter a number between 8 and 128");
 }
+
   // Lowercase
 var lowerCase = confirm("Would you like it to contain lowercase letters?")
-
+  if (lowerCase = true);
+  charactersArray = charactersArray.concat('lowerCase')
 // Uppercase
 var upperCase = confirm("Would you like it to contain uppercase letters?")
 
@@ -39,10 +42,8 @@ if (!lowerCase && !upperCase && !numeric && !special) {
 }
 
 // Once all prompts are answered, the password should be generated and displayed in an alert or written to the page.
-console.log(lowerCase)
-
-
-// return {length:50, lowercase: true, uppercase: false, numeric: true, special: false}
+console.log(lowerCase) // true/false
+console.log(charactersArray)
 }
 
 
