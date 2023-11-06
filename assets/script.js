@@ -25,7 +25,7 @@ if (isNaN(length) || length <= 8 || length >= 128){
 
   // Lowercase
 var lowerCase = confirm("Would you like it to contain lowercase letters?")
-if(lowerCase == true) {
+if(lowerCase == true) {        //if selected, adds it to the charactersArray 
   charactersArray = charactersArray.concat(lowerCasedCharacters)
 }
 
@@ -51,34 +51,17 @@ if(special == true) {
 if (!lowerCase && !upperCase && !numeric && !special) {
   alert("At least one character type must be selected.")
 }
-
-// Once all prompts are answered, the password should be generated and displayed in an alert or written to the page.
-// 
 }
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-// build an array of all possible options based on user prefs
-
+  var random = Math.floor(Math.random() * arr.length)    //selects a random element from whichever array it is appliedt o
 }
 
 // Function to generate password with user input
 function generatePassword() {
-// return("it works!")
-// Pseudocode
-// get the password options
-  var options = getPasswordOptions()
-
-// use conditionals to choose which arrays to concatenate (eg if special characters and numbers, put those arrays together)
-// connect all the arrays the user wants to use (lower, numbers, special etc)
-// use the users input for length for generate that number of random elements from the array
-// get the random one
-
-// need to loop => user requested for a length 
-// this function must return the generated pw as a string
-
+ // this function must return the generated pw as a string
 // how do we ensure pw contains at least one of the character type, not most important
-
 // could use forEach or map but dont need to
 }
 
