@@ -10,8 +10,8 @@ var lowerCasedCharacters = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', '
 // Array of uppercase characters to be included in password
 var upperCasedCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
+var charactersArray = []
 
-var charactersArray = ['']
 // Function to prompt user for password options
 // return the array that contains all the possible characters based on users preferences
 function getPasswordOptions() {
@@ -25,17 +25,27 @@ if (isNaN(length) || length <= 8 || length >= 128){
 
   // Lowercase
 var lowerCase = confirm("Would you like it to contain lowercase letters?")
-  // if(lowerCase == true) {
-  //   charactersArray = charactersArray && lowerCasedCharacters
-  // }
+if(lowerCase == true) {
+  charactersArray = charactersArray.concat(lowerCasedCharacters)
+}
+
 // Uppercase
 var upperCase = confirm("Would you like it to contain uppercase letters?")
+if(upperCase == true) {
+  charactersArray = charactersArray.concat(upperCasedCharacters)
+}
 
 // Numeric
-var numeric = confirm("Would you like it to containnumbers?")
+var numeric = confirm("Would you like it to contain numbers?")
+if(numeric == true) {
+  charactersArray = charactersArray.concat(numericCharacters)
+}
 
 // Special characters ($@%&*, etc.)
 var special = confirm("Would you like it to contain special characters?")
+if(special == true) {
+  charactersArray = charactersArray.concat(specialCharacters)
+}
 
 // Code should validate for each input and at least one character type should be selected.
 if (!lowerCase && !upperCase && !numeric && !special) {
@@ -43,12 +53,8 @@ if (!lowerCase && !upperCase && !numeric && !special) {
 }
 
 // Once all prompts are answered, the password should be generated and displayed in an alert or written to the page.
-console.log(lowerCase) // true/false
-console.log(charactersArray)
+// 
 }
-
-
-
 
 // Function for getting a random element from an array
 function getRandom(arr) {
