@@ -25,8 +25,9 @@ if (isNaN(length) || length <= 8 || length >= 128){
 
   // Lowercase
 var lowerCase = confirm("Would you like it to contain lowercase letters?")
-  if (lowerCase = true);
-  charactersArray = charactersArray.concat('lowerCase')
+  // if(lowerCase == true) {
+  //   charactersArray = charactersArray && lowerCasedCharacters
+  // }
 // Uppercase
 var upperCase = confirm("Would you like it to contain uppercase letters?")
 
@@ -52,6 +53,7 @@ console.log(charactersArray)
 // Function for getting a random element from an array
 function getRandom(arr) {
 // build an array of all possible options based on user prefs
+
 }
 
 // Function to generate password with user input
