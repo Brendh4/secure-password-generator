@@ -10,11 +10,10 @@ var lowerCasedCharacters = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', '
 // Array of uppercase characters to be included in password
 var upperCasedCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
-var charactersArray = []
-
 // Function to prompt user for password options
 // return the array that contains all the possible characters based on users preferences
 function getPasswordOptions() {
+var charactersArray = []
 // Length of password: At least 8 characters but no more than 128.
 var length = 0
 length = prompt("How many characters would you like the password to have, from 8 to 128")
@@ -25,7 +24,7 @@ if (isNaN(length) || length <= 8 || length >= 128){
 
   // Lowercase
 var lowerCase = confirm("Would you like it to contain lowercase letters?")
-if(lowerCase == true) {        //if selected, adds it to the charactersArray 
+if(lowerCase) {        //if selected, adds it to the charactersArray 
   charactersArray = charactersArray.concat(lowerCasedCharacters)
 }
 
@@ -51,11 +50,14 @@ if(special == true) {
 if (!lowerCase && !upperCase && !numeric && !special) {
   alert("At least one character type must be selected.")
 }
+console.log(charactersArray)
+
 }
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-  var random = Math.floor(Math.random() * arr.length)    //selects a random element from whichever array it is appliedt o
+//   var random = Math.floor(Math.random() * arr.length)    //selects a random element from whichever array it is appliedt o
+// console.log(random)
 }
 
 // Function to generate password with user input
