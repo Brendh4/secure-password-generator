@@ -15,7 +15,7 @@ Link to deployed application: https://brendh4.github.io/secure-password-generato
 
 The application is used by clicking the "Generate Password" button, and going through the pop ups on the screen, selecting the number of characters and which character types to be included.
 
-![Password generator screenshot](assets/05-javascript-challenge-demo.PNG)
+![Password generator screenshot](assets/05-javascript-challenge-demo.png)
 
 ## Credits
 
